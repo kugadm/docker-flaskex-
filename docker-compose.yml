@@ -2,7 +2,9 @@ version: "3"
 
 services:
   flaskex:
-    build: ./
+    build:
+      context: .
+      dockerfile: ./Dockerfile
     command: ./app.py 
     ports:
       - 8080:5000
